@@ -1,0 +1,19 @@
+ERRATA
+Capítulo	Página	Detalhes	Encontro	Tiragem
+9	Erro no texto
+A dica da ferramenta:
+
+"O diretório mu-plugins não lê plug-ins em uma subpasta; portanto, todos os plug-ins são arquivos individuais ou devem incluir arquivos adicionais ..."
+
+Deve ser:
+"... todos os plug-ins devem ] ser arquivos individuais "	14/04/11	
+6	129	Errata no texto
+Capítulo 6, página 129, quarta linha de código
+
+Incorreta:
+
+$ clean ['age'] = absint ($ _POST ['age']);
+
+Correto:
+
+$ clean ['age'] = $ _POST ['age'];	7 de maio de 19

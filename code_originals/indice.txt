@@ -1,0 +1,833 @@
+https://www.wiley.com/en-us/Professional+WordPress+Plugin+Development-p-9780470916223
+
+DESCRIÇÃO
+Levando o WordPress para o próximo nível com o desenvolvimento avançado de plugins
+O WordPress é usado para criar blogs e sites auto-hospedados, e está rapidamente se tornando o mais popular sistema de gerenciamento de conteúdo (CMS) na Web. Agora você pode estendê-lo para uso pessoal, corporativo e empresarial com plug-ins avançados e este guia de desenvolvimento profissional. Aprenda a criar plug-ins usando a API de plug-in do WordPress: utilize ganchos, armazene configurações personalizadas, crie arquivos de tradução, proteja seus plug-ins, defina funções de usuário personalizadas, integre widgets, trabalhe com JavaScript e AJAX, crie tipos de postagem personalizados. Você encontrará uma abordagem prática baseada em soluções, muitos exemplos úteis e muito código que você pode incorporar!
+
+Mostra como desenvolver plugins avançados para a plataforma CMS mais popular da atualidade, o WordPress
+Abrange os fundamentos de plugins, como criar e personalizar ganchos, internacionalizando seu site com arquivos de tradução, protegendo plugins, ho ...
+CONSULTE MAIS INFORMAÇÃO
+SOBRE O AUTOR
+Brad Williams é o CEO e co-fundador do webdevstudios.com. Ele é co-autor do WordPress profissional.
+
+Ozh Richard lançou vários plugins populares do WordPress e venceu um concurso anual de plugins do WordPress.
+
+Justin Tadlock desenvolveu vários plugins e ensina aos usuários como usar plugins e temas em seu site WordPress ThemeHybrid.com.
+
+PERMISSÕES
+Solicitar permissão para reutilizar o conteúdo deste site
+
+ÍNDICE
+Prefácio xxi
+
+Introdução xxiii
+
+Capítulo 1: Introdução aos Plugins 1
+
+O que é um plug-in? 1 1
+
+Como os plug-ins interagem com o WordPress 2
+
+Quando os plugins são carregados? 3
+
+Plugins disponíveis 3
+
+Diretório oficial de plug-ins 3
+
+Exemplos populares de plugins 4
+
+Tags populares de plugins 4
+
+Vantagens dos plugins 5
+
+Não modificando o Core 5
+
+Por que reinventar a roda 5
+
+Separando plugins e temas 6
+
+Atualizações fáceis 6
+
+Mais fácil de compartilhar e reutilizar 7
+
+Sandbox do plug-in 7
+
+Comunidade de plug-ins 7
+
+Instalando e gerenciando plug-ins 7
+
+Instalando um plug-in 7
+
+Gerenciando plug-ins 8
+
+Editando plugins 8
+
+Diretórios de plug-ins 8
+
+Tipos de plugins 9
+
+Testando a funcionalidade do plug-in 10
+
+Resumo 10
+
+Capítulo 2: Fundação de plug-ins 11
+
+Criando um arquivo de plug-in 11
+
+Nomeando seu plug-in 11
+
+Usando uma pasta 12
+
+Práticas de sanidade 12
+
+Prefixar tudo 12
+
+Organização de arquivos 13
+
+Estrutura de pastas 13
+
+Requisitos de cabeçalho 14
+
+Criando o cabeçalho 14
+
+Licença de plug-in 15
+
+Determinando caminhos 15
+
+Caminhos de plug-in 15
+
+Caminhos locais 16
+
+Caminhos de URL 17
+
+Ativar / desativar funções 18
+
+Função de ativação do plug-in 18
+
+Criar configurações padrão ao ativar 19
+
+Função de desativação de plug-in 19
+
+Desativar não é desinstalado 20
+
+Métodos de desinstalação 20
+
+Por que a desinstalação é necessária 20
+
+Uninstall.php 21
+
+Desinstalar Hook 21
+
+Padrões de codificação 22
+
+Documente seu código 23
+
+Nomeando variáveis, funções e arquivos 23
+
+Cotações simples e duplas 24
+
+Recuo 24
+
+Brace Style 25
+
+Uso do espaço 25
+
+Taquigrafia PHP 26
+
+Instruções SQL 26
+
+Lista de verificação de desenvolvimento de plugins 26
+
+Resumo 27
+
+Capítulo 3: Ganchos 29
+
+Ações 30
+
+O que é uma ação? 31
+
+Funções do gancho de ação 32
+
+Ganchos de ação comumente usados ​​36
+
+Filtros 39
+
+O que é um filtro? 40.
+
+Funções do gancho de filtro 41
+
+Funções de retorno rápido 46
+
+Ganchos de filtro comumente usados ​​47
+
+Usando ganchos de dentro de uma classe 51
+
+Criando ganchos personalizados 52
+
+Benefícios da criação de ganchos personalizados 53
+
+Exemplo de gancho de ação personalizada 53
+
+Exemplo de gancho de filtro personalizado 54
+
+Como encontrar ganchos 55
+
+Procurando por ganchos no código principal 56
+
+Ganchos variáveis ​​56
+
+Listas de referência de gancho 56
+
+Resumo 57
+
+Capítulo 4: Integrando no  Wordpress 59
+
+Adicionando menus e submenus 59
+
+Criando um menu de nível superior 60
+
+Adicionando um Submenu 61
+
+Adicionando um item de menu a um menu existente 62
+
+Criando widgets 63
+
+Criando um widget 63
+
+Widget avançado 68
+
+Criando widgets do painel 74
+
+Criando um widget de painel com opções 75
+
+Meta-caixas 79
+
+Adicionando uma Meta Box Personalizada 79
+
+Salvando dados da Meta Box 80
+
+Advanced Meta Box 84
+
+Mantendo a Consistência 90
+
+Usando a interface do usuário do WordPress 90
+
+Rubricas 90
+
+Ícones 91
+
+Mensagens 91
+
+Botões 92
+
+Links 93
+
+Campos do formulário 93
+
+Quadros 94
+
+Paginação 95
+
+Resumo 96
+
+Capítulo 5: Internacionalização 97
+
+Internacionalização e localização 97
+
+Por que Internacionalizar? 98
+
+Compreendendo a internacionalização no trabalho profissional 98
+
+Preparando o plug-in para tradução 99
+
+Ecoando e retornando seqüências de caracteres 99
+
+Usando espaços reservados 108
+
+Internacionalizando o JavaScript 110
+
+Criando arquivos de tradução 113
+
+Arquivos MO e PO 113
+
+Ferramentas de tradução 113
+
+Como criar um arquivo POT 114
+
+Onde armazenar arquivos de tradução 115
+
+Resumo 115
+
+Capítulo 6: Segurança de plug-ins 117
+
+Protegendo seu plug-in 117
+
+O que protege seu plug-in 118
+
+O que não protege seu plug-in 118
+
+Permissões do usuário 118
+
+Como verificar current_user_can () 118
+
+Não verifique muito cedo 119
+
+Nonces 120
+
+Autoridade versus intenção 120
+
+O que é um Nonce? 121
+
+Como criar e verificar nonces 122
+
+Nonces em scripts do Ajax 127
+
+Validação de dados e higienização 127
+
+A necessidade de validação e higienização de dados 127
+
+Boas práticas: Identificando dados potencialmente contaminados 129
+
+Validando ou higienizando a entrada? 130
+
+Validando e higienizando o livro de receitas 131
+
+Formatando instruções SQL 149
+
+O objeto $ wpdb 149
+
+Por que os métodos wpdb são superiores 150
+
+Métodos Multifuncionais 151
+
+Métodos comuns 153
+
+Protegendo consultas contra injeções de SQL 157
+
+Métodos e propriedades diversos do wpdb 159
+
+Bons hábitos de segurança 160
+
+Resumo 161
+
+Capítulo 7: Configurações de plug-ins 163
+
+A API de opções 163
+
+Opções de economia 164
+
+Salvando uma matriz de opções 164
+
+Recuperando opções 165
+
+Carregando uma matriz de opções 166
+
+Exclusão de opções 167
+
+O parâmetro de carregamento automático 167
+
+A API de configurações 169
+
+Benefícios da API de configurações 169
+
+Funções da API de configurações 169
+
+Resumindo: Um Gerenciamento Completo de Plug-ins Página 174
+
+Melhorando o feedback sobre erros de validação 176
+
+Adicionando campos a uma página existente
+
+A API de transientes 180
+
+Salvando uma opção expirada 181
+
+Recuperando uma opção expirada 181
+
+Excluindo uma opção expirada 181
+
+Um exemplo prático de uso de transitórios 182
+
+Detalhes técnicos 182
+
+Ideias transitórias 183
+
+Salvando as configurações por usuário 183
+
+Criando um plug-in 183
+
+Metadados do usuário 183
+
+Salvando metadados do usuário 184
+
+Atualizando metadados do usuário 184
+
+Obtendo metadados do usuário 185
+
+Excluindo metadados do usuário 185
+
+Obtendo o ID do usuário 186
+
+Adicionando campos de entrada a um perfil
+
+Admin do BOJ Lang Plugin 188
+
+Configurações por usuário: práticas recomendadas 190
+
+Armazenando dados em tabelas personalizadas 191
+
+Tipos de dados 191
+
+Tabelas padrão do WordPress 191
+
+Criando uma tabela personalizada 191
+
+Atualizando a estrutura de uma tabela personalizada 193
+
+dbDelta () Dicas para o sucesso 194
+
+Acessando sua tabela personalizada 196
+
+Resumo 196
+
+Capítulo 8: Usuários 197
+
+Trabalhando com usuários 198
+
+Funções do usuário 198
+
+Criando, atualizando e excluindo usuários 202
+
+Dados do usuário 207
+
+Metadados do usuário 212
+
+Funções e recursos 219
+
+O que são funções e recursos? 220
+
+Funções padrão 220
+
+Funções personalizadas 221
+
+Limitando o acesso 221
+
+Verificando permissões de usuário 222
+
+O usuário é um administrador? 226
+
+Permitindo permissões personalizadas 227
+
+Personalizando funções 229
+
+Criando uma função 229
+
+Exclusão de uma função 230
+
+Adicionando recursos a uma função 231
+
+Removendo recursos de uma função 232
+
+Um plug-in de função e capacidade personalizados 233
+
+Resumo 236
+
+Capítulo 9: API HTTP 237
+
+Curso de Falhas em Solicitações HTTP 237
+
+O que é uma solicitação HTTP? 237
+
+Como fazer solicitações HTTP no PHP 240
+
+Funções HTTP do WordPress 242
+
+As funções wp_remote_ 242
+
+Configuração avançada e dicas 248
+
+Praticar: Lendo JSON de uma API Remota 255
+
+Obtendo e lendo JSON 256
+
+Seu Plug-in Funcional 257
+
+Praticar: Enviando Dados para uma API Remota 259
+
+Parâmetros de formatação para solicitações POST 259
+
+Seu Plug-in Funcional 260
+
+Praticar: Ler Conteúdo Arbitrário 262
+
+Crie seu próprio repositório de plugins 263
+
+Como as atualizações de plug-in funcionam no WordPress 263
+
+Sondando uma API alternativa de um plug-in 264
+
+Construindo a API alternativa 268
+
+Algumas palavras de cautela sobre a API auto-hospedada 269
+
+Caso especial: Obtendo feeds remotos 269
+
+Resumo 270
+
+Capítulo 10: A API Shortcode 271
+
+Criando códigos de acesso 271
+
+O que são códigos de acesso 271
+
+Registrar códigos de acesso personalizados 273
+
+Dicas de Shortcode 277
+
+Pense Simplicidade para o Usuário 277
+
+Lembre-se da dinâmica 280
+
+Olhe sob os capuzes 281
+
+Um "código bb" para o plugin de comentários 283
+
+Limitações de aninhamento de códigos curtos 286
+
+Integrando o Google Maps 286
+
+Acessando a API de geocodificação do Google 287
+
+Armazenando resultados da API 288
+
+Acessando a API do Google Maps 290
+
+Mais ideias rápidas de Shortcode 295
+
+Exibir conteúdo exclusivo para membros 295
+
+Exibir conteúdo com tempo limitado 296
+
+Ofuscar endereços de email 296
+
+Resumo 297
+
+Capítulo 11: Estendendo postagens: metadados, tipos personalizados de postagens e taxonomias 299
+
+Criando tipos de postagem personalizados 300
+
+Possibilidades de tipo de postagem 300
+
+Registrando um Tipo de Postagem 300
+
+Definindo etiquetas de tipo de postagem 305
+
+Usando recursos personalizados 306
+
+Anexando taxonomias existentes 308
+
+Usando tipos de postagem personalizados 309
+
+Criando um loop de tipo de postagem personalizado 309
+
+Recuperando conteúdo de tipo de postagem personalizado 311
+
+Verificando se existe um tipo de postagem 312
+
+Publicar metadados 313
+
+Adicionando metadados de postagem 314
+
+Recuperando metadados de postagem 315
+
+Atualizando metadados de postagem 316
+
+Exclusão de metadados de postagem 317
+
+Criando taxonomias personalizadas 318
+
+Compreendendo as taxonomias 318
+
+Registrando uma taxonomia customizada 319
+
+Atribuindo uma taxonomia a um tipo de posto 323
+
+Usando taxonomias personalizadas 324
+
+Recuperando uma taxonomia 324
+
+Usando uma taxonomia com postagens 325
+
+Etiquetas condicionais de taxonomia 327
+
+Um plug-in de tipo e taxonomia de postagem 329
+
+Resumo 332
+
+Capítulo 12: Javascript e Ajax no  Wordpress 333
+
+jQuery - Uma Breve Introdução 333
+
+Benefícios do uso do jQuery 334
+
+Curso de colisão do jQuery 334
+
+Ajax 337
+
+O que é o Ajax? 338
+
+Melhores práticas do Ajax 341
+
+Adicionando JavaScript no WordPress 341
+
+Uma maneira correta de incluir scripts 341
+
+Onde incluir scripts 348
+
+Adicionando scripts somente quando necessário 350
+
+Scripts dinâmicos no WordPress 354
+
+Ajax no WordPress 358
+
+Ajax no WordPress: Princípios 358
+
+Um exemplo completo: links "Leia mais" instantâneos 360
+
+Outro exemplo: Exclusão de comentários de front-end 367
+
+Depurando o Ajax 372
+
+Resumo 373
+
+Capítulo 13: Cron 375
+
+O que é o Cron? 375
+
+Como o Cron é executado? 375
+
+Agendando eventos Cron 376
+
+Programando um evento recorrente 376
+
+Agendando um único evento 379
+
+Cancelando o agendamento de um evento 381
+
+Especificando seus próprios intervalos Cron 382
+
+Visualizando eventos Cron agendados 382
+
+True Cron 386
+
+Uso prático 386
+
+Exclusão de revisões posteriores semanalmente 386
+
+O Blog Pester Plugin 391
+
+O plug-in Excluir comentários 395
+
+Resumo 401
+
+Capítulo 14: A API de reescrita 403
+
+Por que reescrever URLs 403
+
+Link permanente princípios 404
+
+Mod_rewrite 404 do Apache
+
+Reescrita de URL no WordPress 405
+
+Como o WordPress lida com consultas 406
+
+Visão geral do processo de consulta 406
+
+O objeto reescrito 407
+
+O objeto de consulta 407
+
+O que os plug-ins podem fazer 408
+
+Usos práticos 408
+
+Reescrevendo um URL para Criar uma Lista de Lojas 408
+
+Criando uma nova estrutura de link permanente e integrando páginas que não são do WordPress 415
+
+Adicionando um ponto final e alterando o formato de saída 417
+
+Adicionando um feed personalizado para as últimas imagens carregadas 421
+
+Resumo 423
+
+Capítulo 15: Multisite 425
+
+Diferenças 426
+
+WordPress versus rede multissite 426
+
+Compreendendo a terminologia multissite 426
+
+Vantagens do Multisite 427
+
+Habilitando o multissite no WordPress 427
+
+Funções multisite 428
+
+O poder do blog ID 428
+
+Funções comuns 429
+
+Comutando e restaurando sites 431
+
+Exemplos de códigos de acesso de conteúdo de rede 434
+
+Um exemplo de widget de conteúdo de rede 440
+
+Criando um novo site 446
+
+Opções de site multissite 452
+
+Usuários em uma rede 453
+
+Superadministrador multissite 457
+
+Verificando o proprietário do site 458
+
+Estatísticas da rede 459
+
+Esquema de banco de dados multissite 460
+
+Tabelas multisites específicas 460
+
+Tabelas específicas do site 460
+
+Resumo 461
+
+Capítulo 16: Depurando e Otimizando 463
+
+Suporte para versões antigas (não) 463
+
+Mantendo-se atualizado com o desenvolvimento do WordPress 464
+
+Funções Descontinuadas 465
+
+Lidando com instalações obsoletas de clientes 466
+
+Depuração 466
+
+Habilitando a depuração 467
+
+Exibindo mensagens de depuração 467
+
+Corrigindo mensagens de depuração 468
+
+Log de erro 472
+
+Habilitando o log 472
+
+Definindo a localização do arquivo de log 473
+
+Compreendendo o arquivo de log 473
+
+Armazenamento em cache 473
+
+Salvando, carregando e excluindo dados em cache 474
+
+Armazenamento em cache de dados em um plug-in 475
+
+Resumo 477
+
+Capítulo 17: Marketing de seu plug-in 479
+
+Escolhendo uma licença para o seu plug-in 480
+
+Opções diferentes 480
+
+Por que é Importante 481
+
+Ganhar dinheiro ao usar a GPL 482
+
+Enviando para WordPress.org 482
+
+Criando uma conta 484
+
+Enviando um plug-in 484
+
+Configurando o SVN 485
+
+Criando um arquivo readme.txt 486
+
+Reconhecendo o seu plug-in 489
+
+Nomeando seu plug-in 489
+
+Construindo um site 491
+
+Criando uma página para o seu plug-in 492
+
+Anunciando seu plug-in 493
+
+Suportando seus plugins 493
+
+Obtendo feedback 494
+
+Saindo do porão 495
+
+Outros métodos de promoção 495
+
+Resumo 496
+
+Capítulo 18: A caixa de ferramentas do desenvolvedor 497
+
+Principal como referência 497
+
+Documentação em linha 497
+
+Encontrando Funções 499
+
+Arquivos principais comuns 499
+
+Codex 501
+
+Pesquisando no Codex 501
+
+Referência de Função 501
+
+Sites da Ferramenta 502
+
+PHPXref 502
+
+Banco de dados de ganchos 503
+
+Recursos da comunidade 503
+
+Fóruns de suporte 503
+
+Listas de discussão 504
+
+WordPress Chat 504
+
+Atualizações de desenvolvimento do WordPress 505
+
+Idéias WordPress 505
+
+Sites de Notícias da Comunidade 505
+
+Eventos locais 506
+
+Ferramentas 507
+
+Navegador 507
+
+Editor 507
+
+Implantando arquivos com FTP, SFTP e SSH 508
+
+phpMyAdmin 508
+
+Resumo 509
+
+Índice 511
